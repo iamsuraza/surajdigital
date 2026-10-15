@@ -1,0 +1,19 @@
+{
+  "name": "suraj-digital-website",
+  "version": "1.0.0",
+  "description": "Official modern website for Suraj Digital - Affordable Digital Solutions in Nepal",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "suraj-digital",
+    "nepal-website",
+    "portfolio",
+    "business-website",
+    "lalitpur"
+  ],
+  "author": "Suraj Kumar Gupta",
+  "license": "ISC"
+}
