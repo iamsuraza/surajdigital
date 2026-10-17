@@ -4,6 +4,7 @@
   "description": "Official modern website for Suraj Digital - Affordable Digital Solutions in Nepal",
   "main": "index.html",
   "scripts": {
+    "build": "echo 'Build complete for static site'",
     "start": "python -m http.server 8000",
     "serve": "npx serve ."
   },
