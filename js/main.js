@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Elements ---
   const header = document.querySelector('.site-header');
   const menuToggle = document.getElementById('menuToggle');
+  const bottomMenuTrigger = document.getElementById('bottomMenuTrigger');
   const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
   const navLinks = document.querySelectorAll('.desktop-nav .nav-item-link, .mobile-nav-links a');
   const backToTopBtn = document.getElementById('backToTop');
   const toast = document.getElementById('toastNotification');
@@ -47,11 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
       const activeLink = document.querySelector(`.desktop-nav a[href*="${sectionId}"]`);
+      const bottomActiveLink = document.querySelector(`.mobile-bottom-bar a[href="#${sectionId}"]`);
 
       if (scrollPos > sectionTop && scrollPos <= sectionTop + sectionHeight) {
         if (activeLink) {
           document.querySelectorAll('.desktop-nav .nav-item-link').forEach(l => l.classList.remove('active'));
           activeLink.classList.add('active');
+        }
+        if (bottomActiveLink) {
+          document.querySelectorAll('.mobile-bottom-bar .bottom-action-item').forEach(l => {
+            if (!l.classList.contains('action-whatsapp')) {
+              l.classList.remove('active');
+            }
+          });
+          bottomActiveLink.classList.add('active');
         }
       }
     });
@@ -60,33 +71,54 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
-  // --- Mobile Navigation Drawer ---
-  if (menuToggle && mobileNavDrawer) {
-    menuToggle.addEventListener('click', () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      mobileNavDrawer.classList.toggle('open');
-      document.body.style.overflow = !isExpanded ? 'hidden' : '';
-    });
+  // --- Mobile Navigation Drawer & Bottom Bar Control ---
+  const toggleMobileNav = (forceState) => {
+    if (!mobileNavDrawer) return;
+    const currentState = mobileNavDrawer.classList.contains('open');
+    const newState = forceState !== undefined ? forceState : !currentState;
 
-    // Close mobile nav when clicking a link
-    mobileNavDrawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNavDrawer.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
+    mobileNavDrawer.classList.toggle('open', newState);
+    if (mobileNavBackdrop) {
+      mobileNavBackdrop.classList.toggle('open', newState);
+    }
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', String(newState));
+    }
+    if (bottomMenuTrigger) {
+      bottomMenuTrigger.setAttribute('aria-expanded', String(newState));
+      bottomMenuTrigger.classList.toggle('active', newState);
+    }
+    document.body.style.overflow = newState ? 'hidden' : '';
+  };
 
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileNavDrawer.classList.contains('open')) {
-        mobileNavDrawer.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => toggleMobileNav());
+  }
+
+  if (bottomMenuTrigger) {
+    bottomMenuTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMobileNav();
     });
   }
+
+  if (mobileNavBackdrop) {
+    mobileNavBackdrop.addEventListener('click', () => toggleMobileNav(false));
+  }
+
+  // Close mobile nav when clicking any link inside it
+  if (mobileNavDrawer) {
+    mobileNavDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => toggleMobileNav(false));
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNavDrawer && mobileNavDrawer.classList.contains('open')) {
+      toggleMobileNav(false);
+    }
+  });
 
   // --- Smooth Scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
