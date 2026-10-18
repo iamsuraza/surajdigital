@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A192F"/>
+      <stop offset="100%" stop-color="#172A45"/>
+    </linearGradient>
+    <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#FFC107"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="400" fill="#F1F5F9" rx="16"/>
+
+  <!-- Browser Frame -->
+  <rect x="25" y="25" width="550" height="350" rx="12" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  
+  <!-- Browser Header Bar -->
+  <path d="M 25 37 Q 25 25 37 25 L 563 25 Q 575 25 575 37 L 575 58 L 25 58 Z" fill="#0A192F"/>
+  <circle cx="45" cy="42" r="4.5" fill="#EF4444"/>
+  <circle cx="58" cy="42" r="4.5" fill="#F59E0B"/>
+  <circle cx="71" cy="42" r="4.5" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="95" y="34" width="300" height="16" rx="8" fill="#1E293B"/>
+  <text x="110" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" fill="#94A3B8">https://kathmandulogistics.com.np</text>
+
+  <!-- Website Content Preview -->
+  <!-- Navigation -->
+  <rect x="45" y="75" width="70" height="14" rx="4" fill="#0A192F"/>
+  <rect x="410" y="77" width="35" height="10" rx="3" fill="#64748B"/>
+  <rect x="455" y="77" width="35" height="10" rx="3" fill="#64748B"/>
+  <rect x="500" y="73" width="55" height="18" rx="4" fill="url(#goldGrad1)"/>
+
+  <!-- Hero Section Inside Preview -->
+  <rect x="45" y="105" width="510" height="140" rx="8" fill="url(#bgGrad1)"/>
+  
+  <text x="70" y="140" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">Reliable Logistics &amp; Transport</text>
+  <text x="70" y="160" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" fill="#94A3B8">Seamless freight &amp; supply chain solutions throughout Nepal.</text>
+  
+  <rect x="70" y="180" width="90" height="26" rx="4" fill="url(#goldGrad1)"/>
+  <text x="86" y="197" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="bold" fill="#0A192F">Get A Quote</text>
+
+  <rect x="170" y="180" width="85" height="26" rx="4" fill="transparent" stroke="#00A896" stroke-width="1.5"/>
+  <text x="185" y="197" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="bold" fill="#00A896">Our Fleet</text>
+
+  <!-- Hero Illustration inside preview -->
+  <rect x="360" y="120" width="170" height="105" rx="6" fill="#1E293B"/>
+  <line x1="380" y1="200" x2="510" y2="200" stroke="#00A896" stroke-width="2"/>
+  <polygon points="380,185 410,165 440,180 470,150 500,175 510,170" fill="none" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Three Service Cards Inside Preview -->
+  <rect x="45" y="260" width="158" height="95" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <circle cx="70" cy="285" r="12" fill="#E0F2FE"/>
+  <rect x="65" y="307" width="80" height="8" rx="2" fill="#0A192F"/>
+  <rect x="65" y="322" width="115" height="5" rx="2" fill="#94A3B8"/>
+  <rect x="65" y="332" width="95" height="5" rx="2" fill="#CBD5E1"/>
+
+  <rect x="221" y="260" width="158" height="95" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <circle cx="246" cy="285" r="12" fill="#FEF3C7"/>
+  <rect x="241" y="307" width="85" height="8" rx="2" fill="#0A192F"/>
+  <rect x="241" y="322" width="115" height="5" rx="2" fill="#94A3B8"/>
+  <rect x="241" y="332" width="95" height="5" rx="2" fill="#CBD5E1"/>
+
+  <rect x="397" y="260" width="158" height="95" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <circle cx="422" cy="285" r="12" fill="#DCFCE7"/>
+  <rect x="417" y="307" width="80" height="8" rx="2" fill="#0A192F"/>
+  <rect x="417" y="322" width="115" height="5" rx="2" fill="#94A3B8"/>
+  <rect x="417" y="332" width="95" height="5" rx="2" fill="#CBD5E1"/>
+
+  <!-- Watermark badge: Sample Concept -->
+  <g transform="translate(420, 340)">
+    <rect width="135" height="22" rx="4" fill="#0A192F" opacity="0.9"/>
+    <text x="12" y="15" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#F5A623">★ Sample Concept</text>
+  </g>
+</svg>

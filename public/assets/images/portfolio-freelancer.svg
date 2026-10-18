@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="shadowP2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="#F8FAFC" rx="16"/>
+
+  <!-- Browser Frame -->
+  <rect x="25" y="25" width="550" height="350" rx="12" fill="#FFFFFF" filter="url(#shadowP2)"/>
+  
+  <!-- Header Bar -->
+  <path d="M 25 37 Q 25 25 37 25 L 563 25 Q 575 25 575 37 L 575 58 L 25 58 Z" fill="#0A192F"/>
+  <circle cx="45" cy="42" r="4.5" fill="#EF4444"/>
+  <circle cx="58" cy="42" r="4.5" fill="#F59E0B"/>
+  <circle cx="71" cy="42" r="4.5" fill="#10B981"/>
+  <rect x="95" y="34" width="280" height="16" rx="8" fill="#1E293B"/>
+  <text x="110" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" fill="#94A3B8">https://anita-shrestha.dev</text>
+
+  <!-- Content -->
+  <!-- Top Intro Grid -->
+  <g transform="translate(50, 75)">
+    <!-- Avatar circle -->
+    <circle cx="40" cy="40" r="35" fill="#E2E8F0" stroke="#00A896" stroke-width="3"/>
+    <circle cx="40" cy="32" r="14" fill="#64748B"/>
+    <path d="M 20 62 A 20 20 0 0 1 60 62 Z" fill="#64748B"/>
+
+    <text x="95" y="30" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="bold" fill="#0A192F">Anita Shrestha</text>
+    <text x="95" y="48" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" fill="#00A896" font-weight="600">UI/UX Designer &amp; Frontend Creator</text>
+    <text x="95" y="65" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" fill="#64748B">Kathmandu, Nepal • Available for Remote Projects</text>
+
+    <!-- Social / Contact buttons -->
+    <rect x="360" y="25" width="75" height="26" rx="6" fill="#F5A623"/>
+    <text x="375" y="42" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="bold" fill="#0A192F">Hire Me</text>
+
+    <rect x="445" y="25" width="55" height="26" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="458" y="42" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="bold" fill="#334155">CV</text>
+  </g>
+
+  <!-- Skills badges -->
+  <g transform="translate(50, 165)">
+    <text x="0" y="10" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0A192F">Core Skills &amp; Tools</text>
+    <rect x="0" y="20" width="70" height="20" rx="10" fill="#E0F2FE"/>
+    <text x="14" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="600" fill="#0284C7">Figma</text>
+
+    <rect x="78" y="20" width="65" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="92" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="600" fill="#16A34A">HTML/CSS</text>
+
+    <rect x="151" y="20" width="75" height="20" rx="10" fill="#FEF3C7"/>
+    <text x="163" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="600" fill="#D97706">JavaScript</text>
+
+    <rect x="234" y="20" width="85" height="20" rx="10" fill="#F3E8FF"/>
+    <text x="246" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="600" fill="#9333EA">Responsive UI</text>
+  </g>
+
+  <!-- Featured Projects -->
+  <g transform="translate(50, 230)">
+    <text x="0" y="12" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0A192F">Featured Works</text>
+
+    <!-- Card 1 -->
+    <rect x="0" y="24" width="240" height="95" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="12" y="36" width="60" height="70" rx="6" fill="#0A192F"/>
+    <polygon points="32,70 42,55 52,70" fill="#F5A623"/>
+    <text x="82" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0F172A">Mobile Banking App</text>
+    <text x="82" y="68" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.5" fill="#64748B">User research &amp; design system</text>
+    <text x="82" y="90" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#00A896">View Case Study →</text>
+
+    <!-- Card 2 -->
+    <rect x="260" y="24" width="240" height="95" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="272" y="36" width="60" height="70" rx="6" fill="#00A896"/>
+    <circle cx="302" cy="71" r="14" fill="#FFFFFF" opacity="0.3"/>
+    <text x="342" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0F172A">E-Commerce Brand</text>
+    <text x="342" y="68" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.5" fill="#64748B">Shopify layout &amp; social ads</text>
+    <text x="342" y="90" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#00A896">View Case Study →</text>
+  </g>
+
+  <!-- Watermark badge -->
+  <g transform="translate(420, 340)">
+    <rect width="135" height="22" rx="4" fill="#0A192F" opacity="0.9"/>
+    <text x="12" y="15" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#F5A623">★ Sample Concept</text>
+  </g>
+</svg>
